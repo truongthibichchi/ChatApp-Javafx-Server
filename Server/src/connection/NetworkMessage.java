@@ -10,5 +10,13 @@ public class NetworkMessage {
     }
     public MessageType getType(){return type;}
     public Object getContent(){return content;}
+
+    public void setContent (Object content){
+        this.content=content;
+    }
+
+    public void setType (MessageType type){
+        this.type=type;
+    }
 }
 
