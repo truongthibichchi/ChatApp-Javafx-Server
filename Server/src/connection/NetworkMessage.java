@@ -1,9 +1,12 @@
 package connection;
 
-public class NetworkMessage {
+import java.io.Serializable;
+
+public class NetworkMessage implements Serializable{
     private MessageType type;
     private Object content;
 
+    public NetworkMessage(){}
     public NetworkMessage(MessageType type, Object content){
         this.type=type;
         this.content=content;

@@ -31,16 +31,6 @@ public class Server {
         }
     }
 
-   /* public void showDialog (String message){
-        Platform.runLater(()->{
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("SERVER!");
-            alert.setHeaderText(message);
-            alert.setContentText("server is running.");
-            alert.showAndWait();
-        });
-    }
-*/
     private static class Handler extends Thread {
         //private String name;
         private Socket socket;
@@ -56,13 +46,13 @@ public class Server {
 
         public void run (){
             try{
+                is=socket.getInputStream();
+                input = new ObjectInputStream(is);
                 os= socket.getOutputStream();
                 output = new ObjectOutputStream(os);
 
-                is=socket.getInputStream();
-                input = new ObjectInputStream(is);
-
                 //NetworkMessage msg = (NetworkMessage) input.readObject();
+
                 //writers.add(output);
                 while (socket.isConnected()){
                     NetworkMessage inputmsg = (NetworkMessage) input.readObject();
