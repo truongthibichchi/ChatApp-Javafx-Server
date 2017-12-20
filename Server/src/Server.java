@@ -1,11 +1,13 @@
 
 
+import Util.BCrypt;
+import connection.MessageContent.UserLogInMsgContent;
 import connection.MessageType;
 import connection.NetworkMessage;
 import exception.DuplicateUserException;
 
 import pojo.Users;
-
+import DAO.*;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -32,7 +34,6 @@ public class Server {
     }
 
     private static class Handler extends Thread {
-        //private String name;
         private Socket socket;
         private ObjectInputStream input;
         private OutputStream os;
@@ -51,24 +52,16 @@ public class Server {
                 os= socket.getOutputStream();
                 output = new ObjectOutputStream(os);
 
-                //NetworkMessage msg = (NetworkMessage) input.readObject();
-
-                //writers.add(output);
-                while (socket.isConnected()){
-                    NetworkMessage inputmsg = (NetworkMessage) input.readObject();
-                    if(inputmsg!=null){
-                        if(inputmsg.getType()== MessageType.LOG_IN){
-                            write(inputmsg);
-//                            for (Users u: userList){
-//                                if(u.getUsername().equals(user.getUsername())){
-//                                    if(BCrypt.checkpw(u.getPass(),user.getPass())){
-//                                            write(inputmsg);
-//                                    }
-//                                }
-//                            }
-                        }
-                    }
-                }
+                NetworkMessage msg = (NetworkMessage) input.readObject();
+                if (msg!=null) checkUser(msg);
+                writers.add(output);
+//                while (socket.isConnected()){
+//                    NetworkMessage inputmsg = (NetworkMessage) input.readObject();
+//                    if(inputmsg!=null){
+//                        if(inputmsg.getType()== MessageType.LOG_IN){
+//                        }
+//                    }
+//                }
             }catch (SocketException e){
                     e.printStackTrace();
             }catch (Exception e){
@@ -77,6 +70,31 @@ public class Server {
 
             }
         }
+
+        private void checkUser (NetworkMessage msg) throws IOException {
+            msg.setType(MessageType.CONNECTED);
+            output.writeObject(msg);
+            //List<Users> userList = UsersDAO.getUserList();
+//            UserLogInMsgContent userContent= (UserLogInMsgContent) msg.getContent();
+//            for (Users u : userList) {
+//                if (u.getUsername().equals(userContent.getUsername())) {
+//                    if (BCrypt.checkpw(u.getPass(), userContent.getPass())) {
+//                        msg.setType(MessageType.CONNECTED);
+//                        write(msg);
+//                    }
+//                }
+//            }List<Users> userList = UsersDAO.getUserList();
+//            UserLogInMsgContent userContent= (UserLogInMsgContent) msg.getContent();
+//            for (Users u : userList) {
+//                if (u.getUsername().equals(userContent.getUsername())) {
+//                    if (BCrypt.checkpw(u.getPass(), userContent.getPass())) {
+//                        msg.setType(MessageType.CONNECTED);
+//                        write(msg);
+//                    }
+//                }
+//            }
+        }
+
 
         private void checkDuplicateUser (NetworkMessage msg) throws DuplicateUserException {
             if(!names.containsKey(msg.getContent())){
