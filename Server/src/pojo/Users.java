@@ -10,9 +10,6 @@ public class Users {
     private String username;
     private String pass;
     private String nickname;
-    private String state;
-    private String email;
-    private Integer isActived;
 
     @Id
     @Column(name = "username")
@@ -44,36 +41,6 @@ public class Users {
         this.nickname = nickname;
     }
 
-    @Basic
-    @Column(name = "state")
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    @Basic
-    @Column(name = "email")
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    @Basic
-    @Column(name = "isActived")
-    public Integer getIsActived() {
-        return isActived;
-    }
-
-    public void setIsActived(Integer isActived) {
-        this.isActived = isActived;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -84,9 +51,6 @@ public class Users {
         if (username != null ? !username.equals(users.username) : users.username != null) return false;
         if (pass != null ? !pass.equals(users.pass) : users.pass != null) return false;
         if (nickname != null ? !nickname.equals(users.nickname) : users.nickname != null) return false;
-        if (state != null ? !state.equals(users.state) : users.state != null) return false;
-        if (email != null ? !email.equals(users.email) : users.email != null) return false;
-        if (isActived != null ? !isActived.equals(users.isActived) : users.isActived != null) return false;
 
         return true;
     }
@@ -96,9 +60,6 @@ public class Users {
         int result = username != null ? username.hashCode() : 0;
         result = 31 * result + (pass != null ? pass.hashCode() : 0);
         result = 31 * result + (nickname != null ? nickname.hashCode() : 0);
-        result = 31 * result + (state != null ? state.hashCode() : 0);
-        result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + (isActived != null ? isActived.hashCode() : 0);
         return result;
     }
 }

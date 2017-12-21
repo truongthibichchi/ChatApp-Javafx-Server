@@ -1,13 +1,13 @@
 
 
+import DAO.UsersDAO;
 import Util.BCrypt;
 import connection.MessageContent.UserLogInMsgContent;
 import connection.MessageType;
 import connection.NetworkMessage;
 import exception.DuplicateUserException;
-
 import pojo.Users;
-import DAO.*;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -72,27 +72,20 @@ public class Server {
         }
 
         private void checkUser (NetworkMessage msg) throws IOException {
-            msg.setType(MessageType.CONNECTED);
-            output.writeObject(msg);
-            //List<Users> userList = UsersDAO.getUserList();
-//            UserLogInMsgContent userContent= (UserLogInMsgContent) msg.getContent();
-//            for (Users u : userList) {
-//                if (u.getUsername().equals(userContent.getUsername())) {
+//            msg.setType(MessageType.CONNECTED);
+//            output.writeObject(msg);
+           List<Users> userList = UsersDAO.getUserList();
+            UserLogInMsgContent userContent= (UserLogInMsgContent) msg.getContent();
+            for (Users u : userList) {
+                if (u.getUsername().equals(userContent.getUsername()) && u.getPass().equals(userContent.getPass())) {
+                    msg.setType(MessageType.LOG_IN_SUCEEDED);
+                    output.writeObject(msg);
 //                    if (BCrypt.checkpw(u.getPass(), userContent.getPass())) {
 //                        msg.setType(MessageType.CONNECTED);
-//                        write(msg);
+//                        output.writeObject(msg);
 //                    }
-//                }
-//            }List<Users> userList = UsersDAO.getUserList();
-//            UserLogInMsgContent userContent= (UserLogInMsgContent) msg.getContent();
-//            for (Users u : userList) {
-//                if (u.getUsername().equals(userContent.getUsername())) {
-//                    if (BCrypt.checkpw(u.getPass(), userContent.getPass())) {
-//                        msg.setType(MessageType.CONNECTED);
-//                        write(msg);
-//                    }
-//                }
-//            }
+                }
+            }
         }
 
 

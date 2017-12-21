@@ -1,6 +1,7 @@
 package DAO;
 
 
+import Util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import pojo.Users;
@@ -29,7 +30,7 @@ public class UsersDAO {
 
    public static List<Users> getUserList(){
       List<Users> userList = null;
-      Session session = getSession();
+      Session session = HibernateUtil.getSession();
       try{
          String hql="select user from Users user";
          Query query = session.createQuery(hql);
