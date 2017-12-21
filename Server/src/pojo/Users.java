@@ -11,6 +11,12 @@ public class Users {
     private String pass;
     private String nickname;
 
+    public Users(){};
+    public Users(String username, String pass, String nickname){
+        this.username=username;
+        this.pass=pass;
+        this.nickname=nickname;
+    }
     @Id
     @Column(name = "username")
     public String getUsername() {

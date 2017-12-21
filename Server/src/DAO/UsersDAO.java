@@ -3,6 +3,7 @@ package DAO;
 
 import Util.HibernateUtil;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import pojo.Users;
 
@@ -41,5 +42,23 @@ public class UsersDAO {
          session.close();
       }
       return userList;
+   }
+
+   public static int InsertUser(Users user){
+      int r = 1;
+      final  Session session = getSession();
+      Transaction transaction =null;
+      try{
+         transaction=session.beginTransaction();
+         session.save(user);
+         transaction.commit();
+      }catch (Exception e){
+         r=0;
+         transaction.rollback();
+         System.err.println(e);
+      }finally {
+         session.close();
+      }
+      return r;
    }
 }

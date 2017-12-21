@@ -1,8 +1,8 @@
 
 
 import DAO.UsersDAO;
-import Util.BCrypt;
 import connection.MessageContent.UserLogInMsgContent;
+import connection.MessageContent.UserSignUpMsgContent;
 import connection.MessageType;
 import connection.NetworkMessage;
 import exception.DuplicateUserException;
@@ -17,8 +17,10 @@ import java.util.*;
 
 public class Server {
     private static final int PORT = 9052;
-    private static final Map<Socket, Object> names = new HashMap<>();
+    private static final Map<Socket, Users> names = new HashMap<>();
     private static Set<ObjectOutputStream> writers = new HashSet<>();
+    private ArrayList<Users> users = new ArrayList<>();
+
 
     public static void main (String[] args) throws Exception{
         ServerSocket server = new ServerSocket(PORT);
@@ -53,7 +55,7 @@ public class Server {
                 output = new ObjectOutputStream(os);
 
                 NetworkMessage msg = (NetworkMessage) input.readObject();
-                if (msg!=null) checkUser(msg);
+                if (msg!=null) CheckLogInOrSignUp(msg);
                 writers.add(output);
 //                while (socket.isConnected()){
 //                    NetworkMessage inputmsg = (NetworkMessage) input.readObject();
@@ -71,23 +73,41 @@ public class Server {
             }
         }
 
-        private void checkUser (NetworkMessage msg) throws IOException {
-//            msg.setType(MessageType.CONNECTED);
-//            output.writeObject(msg);
+        private void CheckLogInOrSignUp(NetworkMessage msg) throws  IOException{
+            if(msg.getType()==MessageType.LOG_IN){
+                LogIn(msg);
+            }
+            if (msg.getType()==MessageType.SIGN_UP){
+                SignUp(msg);
+            }
+        }
+        private void LogIn(NetworkMessage msg) throws IOException {
            List<Users> userList = UsersDAO.getUserList();
             UserLogInMsgContent userContent= (UserLogInMsgContent) msg.getContent();
             for (Users u : userList) {
                 if (u.getUsername().equals(userContent.getUsername()) && u.getPass().equals(userContent.getPass())) {
-                    msg.setType(MessageType.LOG_IN_SUCEEDED);
+                    msg.setType(MessageType.LOG_IN_SUCCEEDED);
                     output.writeObject(msg);
-//                    if (BCrypt.checkpw(u.getPass(), userContent.getPass())) {
-//                        msg.setType(MessageType.CONNECTED);
-//                        output.writeObject(msg);
-//                    }
                 }
             }
         }
 
+        private void SignUp(NetworkMessage msg) throws IOException{
+            List<Users> userList = UsersDAO.getUserList();
+            UserSignUpMsgContent userContent = (UserSignUpMsgContent) msg.getContent();
+            Users user = new Users(userContent.getUsername(), userContent.getPass(), userContent.getNickname());
+            for (Users u : userList){
+                if(u.getUsername().equals(userContent.getUsername()) && u.getPass().equals(userContent.getPass())){
+                    msg.setType(MessageType.USER_EXISTED);
+                    output.writeObject(msg);
+                }
+            }
+            int notExisted = UsersDAO.InsertUser(user);
+            if(notExisted==1){
+                msg.setType(MessageType.SIGN_UP_CUCCEEDED);
+                output.writeObject(msg);
+            }
+        }
 
         private void checkDuplicateUser (NetworkMessage msg) throws DuplicateUserException {
             if(!names.containsKey(msg.getContent())){
