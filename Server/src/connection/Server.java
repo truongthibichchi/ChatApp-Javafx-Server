@@ -7,14 +7,18 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Server extends Thread implements MessageCallback {
     private int port;
 
     private HashMap<String, Socket> usersSockets = new HashMap<>();
     private HashMap<Socket, ThreadPerSocket> usersThreads = new HashMap<>();
+    private ArrayList<User> users;
+    private ArrayList<User> usersData=null;
     private ServerWindowController controller;
 
     public Server (int port) {
@@ -37,6 +41,7 @@ public class Server extends Thread implements MessageCallback {
             onOpenServerFailed();
         }
         controller.log("Server is now Ready!");
+        usersData=createFakeData();
 
         while (true) {
             Socket socket = null;
@@ -53,12 +58,24 @@ public class Server extends Thread implements MessageCallback {
     }
 
 
+    private ArrayList<User> createFakeData(){
+        ArrayList<User> list = new ArrayList<>();
+            User user1 = new User("nhi", "nhi", "nhi", Status.ONLINE);
+            User user2 = new User("me", "me", "me", Status.ONLINE);
+            User user3 = new User("be", "be", "be", Status.ONLINE);
+            list.add(user1);
+            list.add(user2);
+            list.add(user3);
+        return list;
+    }
     @Override
-    public void onReceivedMessage(Message msg) {
+    public void onReceivedMessage(Socket socket, Message msg) {
         switch (msg.getType()) {
             case LOGIN:
-
+                    checkDuplicateUser(socket, msg);
                 break;
+            case SIGN_UP:
+                
 
             case LOGOUT:
 
@@ -76,9 +93,15 @@ public class Server extends Thread implements MessageCallback {
 
     @Override
     public void onConnectFailed(Socket socket) {
+        String username=null;
+        for(Map.Entry<String, Socket> entry :usersSockets.entrySet()){
+            if(entry.getValue().equals(socket)){
+                username=entry.getKey();
+            }
+        }
         usersThreads.remove(socket);
-
-        controller.log("A Client disconnected!");
+        if(username!=null) usersSockets.remove(username);
+        controller.log(username+" disconnected!");
     }
 
     public void onOpenServerFailed() {
@@ -89,7 +112,27 @@ public class Server extends Thread implements MessageCallback {
         controller.log("Network Error");
     }
 
-
+    private void checkDuplicateUser(Socket socket, Message msg){
+        if (!usersSockets.containsKey(msg.getUserName())){
+            msg.setType(MessageType.LOGIN_SUCCEEDED);
+            msg.setNickname(msg.getUserName());
+            msg.setUserListData(usersData);
+            usersSockets.put(msg.getUserName(), socket);
+//            User user = new User();
+//            user.setUsername(msg.getUserName());
+//            user.setNickname(msg.getNickname());
+//            user.setPass(msg.getPass());
+//            user.setStatus(Status.ONLINE);
+//
+//            users.add(user);
+            //msg.setUserList(users);
+            sendTo(msg.getUserName(), msg);
+            controller.log(msg.getUserName()+ " has connected to server");
+        }
+        else {
+            controller.log(msg.getUserName()+ " is already connected to server, can't not log in");
+        }
+    }
 
     private void sendTo(String userName, Message msg) {
         Socket socket = usersSockets.get(userName);
@@ -126,7 +169,7 @@ class ThreadPerSocket extends Thread {
 
             while (true) {
                 Message msg = (Message) inputStream.readObject();
-                messageCallback.onReceivedMessage(msg);
+                messageCallback.onReceivedMessage(this.socket, msg);
             }
         } catch (Exception e) {
             messageCallback.onConnectFailed(this.socket);

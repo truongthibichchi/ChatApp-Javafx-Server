@@ -9,6 +9,7 @@ public class ServerWindowController {
     ListView lstLog;
 
     public void log (String msg) {
-        Platform.runLater(() -> lstLog.getItems().add(msg));
+        Platform.runLater(() ->
+                lstLog.getItems().add(msg));
     }
 }
