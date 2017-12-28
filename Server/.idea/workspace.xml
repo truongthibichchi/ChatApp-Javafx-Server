@@ -18,17 +18,14 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/connection/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1443">
-              <caret line="262" column="9" lean-forward="true" selection-start-line="262" selection-start-column="9" selection-end-line="262" selection-end-column="9" />
+            <state relative-caret-position="282">
+              <caret line="181" column="61" lean-forward="true" selection-start-line="181" selection-start-column="61" selection-end-line="181" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#run#0;class#Server#0" expanded="false" />
                 <element signature="method#startServer#0;class#Server#0" expanded="false" />
                 <element signature="method#createFakeData#0;class#Server#0" expanded="false" />
                 <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-                <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-                <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
-                <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
                 <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
                 <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
                 <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
@@ -36,6 +33,16 @@
                 <element signature="method#send#0;class#ThreadPerSocket#0" expanded="false" />
                 <element signature="method#stopThread#0;class#ThreadPerSocket#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerWindowController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/ServerWindowController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -70,12 +77,12 @@
         <option value="$PROJECT_DIR$/src/Server.java" />
         <option value="$PROJECT_DIR$/src/MainLauncher.java" />
         <option value="$PROJECT_DIR$/src/connection/MessageCallback.java" />
-        <option value="$PROJECT_DIR$/src/controllers/ServerWindowController.java" />
         <option value="$PROJECT_DIR$/src/connection/User.java" />
         <option value="$PROJECT_DIR$/src/connection/Status.java" />
         <option value="$PROJECT_DIR$/src/connection/Message.java" />
         <option value="$PROJECT_DIR$/res/views/ServerWindow.fxml" />
         <option value="$PROJECT_DIR$/src/connection/MessageType.java" />
+        <option value="$PROJECT_DIR$/src/controllers/ServerWindowController.java" />
         <option value="$PROJECT_DIR$/src/connection/Server.java" />
       </list>
     </option>
@@ -98,8 +105,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="683" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="683" />
     <option name="height" value="738" />
   </component>
@@ -118,7 +124,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,8 +163,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -335,15 +341,16 @@
       <workItem from="1514346581406" duration="687000" />
       <workItem from="1514375397000" duration="1908000" />
       <workItem from="1514383860928" duration="1301000" />
-      <workItem from="1514422177982" duration="10662000" />
+      <workItem from="1514422177982" duration="14195000" />
+      <workItem from="1514447118536" duration="3720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110911000" />
+    <option name="totallyTimeSpent" value="118164000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -352,8 +359,8 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33495146" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.045307443" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.045307443" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1954612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -361,8 +368,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3656958" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3656958" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -388,7 +395,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/connection/Server.java</url>
-          <line>81</line>
+          <line>82</line>
           <properties />
           <option name="timeStamp" value="62" />
         </line-breakpoint>
@@ -425,9 +432,6 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#createFakeData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
-            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
@@ -469,9 +473,6 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#createFakeData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
-            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
@@ -534,9 +535,6 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#createFakeData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
-            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
@@ -586,9 +584,6 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#createFakeData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
-            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
@@ -631,9 +626,6 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#createFakeData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
-            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
@@ -676,9 +668,6 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#createFakeData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
-            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
@@ -699,9 +688,6 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#createFakeData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
-            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
@@ -722,9 +708,6 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#createFakeData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
-            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
@@ -745,9 +728,6 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#createFakeData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
-            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
@@ -768,9 +748,6 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#createFakeData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
-            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
@@ -806,9 +783,6 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#createFakeData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
-            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
@@ -900,17 +874,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/ServerWindowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/views/ServerWindow.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -919,28 +883,35 @@
           </folding>
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/connection/MessageType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/ServerWindowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/connection/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1443">
-          <caret line="262" column="9" lean-forward="true" selection-start-line="262" selection-start-column="9" selection-end-line="262" selection-end-column="9" />
+        <state relative-caret-position="282">
+          <caret line="181" column="61" lean-forward="true" selection-start-line="181" selection-start-column="61" selection-end-line="181" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#createFakeData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
-            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />

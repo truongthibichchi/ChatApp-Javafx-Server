@@ -1,6 +1,7 @@
 package connection;
 
 import controllers.ServerWindowController;
+
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
@@ -80,7 +81,7 @@ public class Server extends Thread implements MessageCallback {
                 onSignUp(socket, msg);
                 break;
             case CHAT_TEXT:
-                    onChatTextFromGroup(msg);
+                onChatTextFromGroup(msg);
                 break;
         }
     }
@@ -88,14 +89,14 @@ public class Server extends Thread implements MessageCallback {
     @Override
     public void onConnectFailed(Socket socket) {
         String username = null;
-        String nickname= null;
+        String nickname = null;
         for (Map.Entry<String, Socket> entry : usersSockets.entrySet()) {
             if (entry.getValue().equals(socket)) {
                 username = entry.getKey();
                 for (User user : usersData) {
                     if (user.getUsername().equals(username)) {
                         user.setStatus(Status.DISCONNECT);
-                        nickname=user.getNickname();
+                        nickname = user.getNickname();
                         break;
                     }
                 }
@@ -129,6 +130,7 @@ public class Server extends Thread implements MessageCallback {
             }
         }
         msg.setType(MessageType.CONNECTED);
+        msg.setStatus(Status.ONLINE);
         usersSockets.put(signUpUsername, socket);
         User user = new User(signUpUsername, signUpPass, signUpNickname, Status.ONLINE);
         usersData.add(user);
@@ -150,8 +152,8 @@ public class Server extends Thread implements MessageCallback {
     private void onUserAttemptToLogin(Socket socket, Message msg) {
         String loginUserName = msg.getUserName();
         String loginPassword = msg.getPass();
-        String nickname=null;
-        if(isCorrectUserInfo(loginUserName, loginPassword)){
+        String nickname = null;
+        if (isCorrectUserInfo(loginUserName, loginPassword)) {
             if (usersSockets.containsKey(msg.getUserName())) {
 
                 msg.setType(MessageType.ALREADY_LOGGED_IN);
@@ -162,20 +164,21 @@ public class Server extends Thread implements MessageCallback {
                 usersThreads.get(socket).stopThread();
                 usersThreads.remove(socket);
                 return;
-            }
-            else{
+            } else {
                 usersSockets.put(loginUserName, socket);
                 setUserStatus(loginUserName, Status.ONLINE);
 
                 Message msgBackToUser = new Message();
-                for (User user: usersData){
-                    if (loginUserName.equals(user.getUsername())){
-                        nickname=user.getNickname();
+                for (User user : usersData) {
+                    if (loginUserName.equals(user.getUsername())) {
+                        nickname = user.getNickname();
                     }
                 }
 
                 msgBackToUser.setUserName(loginUserName);
+                msgBackToUser.setPass(msg.getPass());
                 msgBackToUser.setNickname(nickname);
+                msgBackToUser.setStatus(Status.ONLINE);
                 msgBackToUser.setType(MessageType.CONNECTED);
                 msgBackToUser.setUserListData(usersData);
                 sendTo(loginUserName, msgBackToUser);
@@ -192,7 +195,7 @@ public class Server extends Thread implements MessageCallback {
                 return;
             }
         }
-        if(!isCorrectUserInfo(loginUserName, loginPassword)){
+        if (!isCorrectUserInfo(loginUserName, loginPassword)) {
             msg.setType(MessageType.WRONG_INFO);
             ThreadPerSocket thread = usersThreads.get(socket);
             thread.send(msg);
@@ -243,24 +246,26 @@ public class Server extends Thread implements MessageCallback {
 
     private void sendTo(String userName, Message msg) {
         Socket socket = usersSockets.get(userName);
-        if(socket!=null){
+        if (socket != null) {
             ThreadPerSocket thread = usersThreads.get(socket);
             thread.send(msg);
         }
     }
 
     private void onChatTextFromGroup(Message msg) {
-        String participants= "";
+        String participants = "";
         ArrayList<User> users = msg.getChatUsers();
-        for(User user: users){
-            participants+=user.getUsername();
+        for (User user : users) {
+            participants += user.getUsername();
         }
-        controller.log(msg.getUserName()+ " send a message to "+ participants + ": "+msg.getText());
+        controller.log(msg.getUserName() + " send a message to " + participants + ": " + msg.getText());
 
-        for(User user: users){
-            sendTo(user.getUsername(),msg);
-            controller.log(user.getUsername()+" recieved a message from  "+ msg.getUserName()+ ": "+msg.getText());
+        for (User user : users) {
+            sendTo(user.getUsername(), msg);
+            controller.log(user.getUsername() + " recieved a message from  " + msg.getUserName() + ": " + msg.getText());
+
         }
+
     }
 }
 
