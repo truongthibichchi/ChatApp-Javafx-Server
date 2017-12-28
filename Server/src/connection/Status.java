@@ -1,5 +1,7 @@
 package connection;
 
-public enum Status {
-    ONLINE, DISCONNECT,NEWMESSAGE
+import java.io.Serializable;
+
+public enum Status implements Serializable {
+    ONLINE, DISCONNECT
 }
