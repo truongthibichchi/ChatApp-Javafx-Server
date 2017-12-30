@@ -9,5 +9,9 @@ public enum MessageType {
     CONNECTED,
     NEW_USER_CONNECTED,
     DISCONNECT,
-    CHAT_TEXT
+    CHANGE_INFO,
+    CHANGE_INFO_SUCCEEDED,
+    CHANGE_INFO_FAILED,
+    CHAT_TEXT,
+    VOICE
 }

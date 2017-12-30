@@ -2,9 +2,7 @@ package controllers;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.text.TextAlignment;
 import org.apache.commons.lang3.text.WordUtils;
 
 public class ServerWindowController {
