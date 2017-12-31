@@ -84,6 +84,10 @@ public class Server extends Thread implements MessageCallback {
             case CHAT_TEXT:
                 onChatTextFromGroup(msg);
                 break;
+
+            case VOICE:
+                onChatVoiceFromGroup(msg);
+                break;
         }
     }
 
@@ -236,7 +240,6 @@ public class Server extends Thread implements MessageCallback {
         return false;
     }
 
-
     private void onUserDisconnected(String username, String nickname, Status status) {
         Message msg = new Message();
         msg.setType(MessageType.DISCONNECT);
@@ -308,6 +311,16 @@ public class Server extends Thread implements MessageCallback {
 
         }
 
+    }
+
+    private void onChatVoiceFromGroup(Message msg){
+        String participants = "";
+        ArrayList<User> users = msg.getChatUsers();
+        for (User user : users) {
+            participants += user.getUsername();
+            sendTo(user.getUsername(), msg);
+        }
+        controller.log(msg.getUserName() + " send a voice message to " + participants + ": ");
     }
 }
 

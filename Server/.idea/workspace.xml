@@ -26,8 +26,8 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/connection/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-313">
-              <caret line="224" column="82" lean-forward="false" selection-start-line="224" selection-start-column="82" selection-end-line="224" selection-end-column="82" />
+            <state relative-caret-position="442">
+              <caret line="331" column="44" lean-forward="true" selection-start-line="331" selection-start-column="44" selection-end-line="331" selection-end-column="44" />
               <folding>
                 <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
                 <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
@@ -35,8 +35,32 @@
                 <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
                 <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
                 <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
+                <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
+                <element signature="method#sendTo#0;class#Server#0" expanded="false" />
+                <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
+                <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
                 <element signature="method#stopThread#0;class#ThreadPerSocket#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageCallback.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/connection/MessageCallback.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/connection/Message.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,12 +90,12 @@
         <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/controllers/ServerWindowController.java" />
         <option value="$PROJECT_DIR$/src/MainLauncher.java" />
-        <option value="$PROJECT_DIR$/src/connection/Message.java" />
         <option value="$PROJECT_DIR$/src/connection/User.java" />
         <option value="$PROJECT_DIR$/src/Util/HibernateUtil.java" />
         <option value="$PROJECT_DIR$/src/pojo/Users.java" />
         <option value="$PROJECT_DIR$/src/connection/MessageType.java" />
         <option value="$PROJECT_DIR$/src/DAO/UsersDAO.java" />
+        <option value="$PROJECT_DIR$/src/connection/Message.java" />
         <option value="$PROJECT_DIR$/src/connection/Server.java" />
       </list>
     </option>
@@ -94,7 +118,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="380" />
     <option name="width" value="986" />
     <option name="height" value="738" />
@@ -115,6 +139,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,25 +173,6 @@
               <item name="Server" type="b2602c69:ProjectViewProjectNode" />
               <item name="Server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="connection" type="462c0819:PsiDirectoryNode" />
-              <item name="Server.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="DAO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -180,7 +186,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -196,14 +201,14 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="07d38a29-ccff-49a5-9d6e-5e913f9cdf12" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="DAO" />
-      <recent name="connection" />
-      <recent name="" />
-      <recent name="controllers" />
-    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="pojo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="connection" />
+      <recent name="DAO" />
+      <recent name="" />
+      <recent name="controllers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Desktop\Server\src" />
@@ -337,15 +342,16 @@
       <workItem from="1514538828567" duration="4885000" />
       <workItem from="1514560418468" duration="2910000" />
       <workItem from="1514588678911" duration="9139000" />
-      <workItem from="1514602270245" duration="3295000" />
+      <workItem from="1514602270245" duration="3451000" />
+      <workItem from="1514698920051" duration="2790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20229000" />
+    <option name="totallyTimeSpent" value="23175000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -356,8 +362,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49029127" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49029127" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16251831" sideWeight="0.27041742" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16251831" sideWeight="0.72958255" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -371,7 +378,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16251831" sideWeight="0.27041742" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -383,7 +389,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -399,6 +405,30 @@
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
+            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
+            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
+            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
+            <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
+            <element signature="method#stopThread#0;class#ThreadPerSocket#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/connection/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
+            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
+            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
+            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
+            <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
+            <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
+            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
+            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
+            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
+            <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
             <element signature="method#stopThread#0;class#ThreadPerSocket#0" expanded="false" />
           </folding>
         </state>
@@ -423,6 +453,10 @@
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
+            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
+            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
+            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
+            <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
             <element signature="method#stopThread#0;class#ThreadPerSocket#0" expanded="false" />
           </folding>
         </state>
@@ -447,6 +481,10 @@
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
+            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
+            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
+            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
+            <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
             <element signature="method#stopThread#0;class#ThreadPerSocket#0" expanded="false" />
           </folding>
         </state>
@@ -462,14 +500,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml" />
     <entry file="file://$PROJECT_DIR$/res/views/ServerWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/connection/Status.java">
@@ -495,14 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/connection/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pojo/Users.java" />
     <entry file="file://$PROJECT_DIR$/src/Util/BCrypt.java" />
     <entry file="file://$PROJECT_DIR$/src/Util/HibernateUtil.java" />
@@ -524,8 +554,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/UsersDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+        <state relative-caret-position="391">
+          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/connection/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -540,8 +578,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/connection/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-313">
-          <caret line="224" column="82" lean-forward="false" selection-start-line="224" selection-start-column="82" selection-end-line="224" selection-end-column="82" />
+        <state relative-caret-position="442">
+          <caret line="331" column="44" lean-forward="true" selection-start-line="331" selection-start-column="44" selection-end-line="331" selection-end-column="44" />
           <folding>
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
             <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
@@ -549,6 +587,10 @@
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
             <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
             <element signature="method#onUserDisconnected#0;class#Server#0" expanded="false" />
+            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
+            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
+            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
+            <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
             <element signature="method#stopThread#0;class#ThreadPerSocket#0" expanded="false" />
           </folding>
         </state>
