@@ -88,6 +88,21 @@ public class Server extends Thread implements MessageCallback {
             case VOICE:
                 onChatVoiceFromGroup(msg);
                 break;
+
+            case REQUEST_CALL:
+                onRequestCall(msg);
+                break;
+            case RESPOND_CALL_ACCEPT:
+                //TODO: set status BUDY -> SEND to all users to update status, send mess to userMain
+                break;
+
+            case RESPOND_CALL_DECLINE:
+                //TODO: send mass to userMain
+                break;
+
+            case VOICE_CALL:
+                //TODO: send to users
+                break;
         }
     }
 
@@ -266,11 +281,10 @@ public class Server extends Thread implements MessageCallback {
             }
             msg.setUserListData(usersData);
             sendToAll(msg);
-            controller.log(msg.getUserName()+"has changed nickname, username to: "+ msg.getNickname()+", "+msg.getPass());
-        }
-        else{
+            controller.log(msg.getUserName() + "has changed nickname, username to: " + msg.getNickname() + ", " + msg.getPass());
+        } else {
             msg.setType(MessageType.CHANGE_INFO_FAILED);
-            controller.log("Change "+msg.getUserName()+"'s info failed");
+            controller.log("Change " + msg.getUserName() + "'s info failed");
             sendTo(msg.getUserName(), msg);
         }
     }
@@ -313,7 +327,7 @@ public class Server extends Thread implements MessageCallback {
 
     }
 
-    private void onChatVoiceFromGroup(Message msg){
+    private void onChatVoiceFromGroup(Message msg) {
         String participants = "";
         ArrayList<User> users = msg.getChatUsers();
         for (User user : users) {
@@ -321,6 +335,16 @@ public class Server extends Thread implements MessageCallback {
             sendTo(user.getUsername(), msg);
         }
         controller.log(msg.getUserName() + " send a voice message to " + participants + ": ");
+    }
+
+    private void onRequestCall(Message msg) {
+        ArrayList<User> list = msg.getChatUsers();
+        for (User user : list) {
+            if (!user.getUsername().equals(msg.getUserName())) {
+                msg.setType(MessageType.REQUEST_CALL);
+                sendTo(user.getUsername(), msg);
+            }
+        }
     }
 }
 
@@ -373,3 +397,4 @@ class ThreadPerSocket extends Thread {
         }
     }
 }
+
