@@ -378,8 +378,10 @@ public class Server extends Thread implements MessageCallback {
     private void onSendVoiceCall(Message msg){
         ArrayList<User> users = msg.getChatUsers();
         for (User user : users) {
-            if(!user.getUsername().equals(msg.getUserName()))
-            sendTo(user.getUsername(), msg);
+            if(!user.getUsername().equals(msg.getUserName())) {
+                sendTo(user.getUsername(), msg);
+                controller.log(msg.getUserName() + " send call voice to " + user.getUsername());
+            }
         }
     }
 }
