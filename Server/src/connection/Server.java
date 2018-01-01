@@ -94,14 +94,16 @@ public class Server extends Thread implements MessageCallback {
                 break;
             case RESPOND_CALL_ACCEPT:
                 //TODO: set status BUDY -> SEND to all users to update status, send mess to userMain
+                onRespondCallAccept(msg);
                 break;
 
             case RESPOND_CALL_DECLINE:
-                //TODO: send mass to userMain
+                //TODO: send mess to userMain
+                onRespondCallDecline(msg);
                 break;
 
             case VOICE_CALL:
-                //TODO: send to users
+                onSendVoiceCall(msg);
                 break;
         }
     }
@@ -124,7 +126,7 @@ public class Server extends Thread implements MessageCallback {
         }
         usersThreads.remove(socket);
         usersSockets.remove(username);
-        onUserDisconnected(username, nickname, Status.DISCONNECT);
+        onUserChangeStatus(username, nickname, Status.DISCONNECT, MessageType.DISCONNECT);
         controller.log(username + " disconnected!");
     }
 
@@ -255,13 +257,13 @@ public class Server extends Thread implements MessageCallback {
         return false;
     }
 
-    private void onUserDisconnected(String username, String nickname, Status status) {
+    private void onUserChangeStatus(String username, String nickname, Status status, MessageType type) {
         Message msg = new Message();
-        msg.setType(MessageType.DISCONNECT);
+        msg.setType(type);
         msg.setUserName(username);
         msg.setNickname(nickname);
         // msg.setAvatar(avatar);
-        msg.setStatus(Status.DISCONNECT);
+        msg.setStatus(status);
         for (Map.Entry<String, Socket> entry : usersSockets.entrySet()) {
             sendTo(entry.getKey(), msg);
         }
@@ -343,7 +345,41 @@ public class Server extends Thread implements MessageCallback {
             if (!user.getUsername().equals(msg.getUserName())) {
                 msg.setType(MessageType.REQUEST_CALL);
                 sendTo(user.getUsername(), msg);
+                controller.log(msg.getUserName()+" sent a call request to "+user.getUsername());
             }
+        }
+    }
+
+    private void onRespondCallAccept(Message msg){
+        ArrayList<User> list = msg.getChatUsers();
+        msg.setType(MessageType.RESPOND_CALL_ACCEPT);
+        for(User user: list){
+            setUserStatus(user.getUsername(), Status.BUSY);
+            if(!user.getUsername().equals(msg.getUserName())){
+                sendTo(user.getUsername(), msg);
+                controller.log(msg.getUserName()+" has accepted a call from "+user.getUsername());
+            }
+            onUserChangeStatus(user.getUsername(), user.getNickname(), Status.BUSY, MessageType.BUSY);
+        }
+    }
+
+    private void onRespondCallDecline(Message msg){
+        ArrayList<User> list = msg.getChatUsers();
+        msg.setType(MessageType.RESPOND_CALL_DECLINE);
+        for(User user: list){
+            if(!user.getUsername().equals(msg.getUserName())){
+                sendTo(user.getUsername(), msg);
+                controller.log(msg.getUserName()+" has declined a call from "+user.getUsername());
+            }
+            onUserChangeStatus(user.getUsername(), user.getNickname(), Status.ONLINE, MessageType.NEW_USER_CONNECTED);
+        }
+    }
+
+    private void onSendVoiceCall(Message msg){
+        ArrayList<User> users = msg.getChatUsers();
+        for (User user : users) {
+            if(!user.getUsername().equals(msg.getUserName()))
+            sendTo(user.getUsername(), msg);
         }
     }
 }
