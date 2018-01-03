@@ -145,6 +145,15 @@ public class Server extends Thread implements MessageCallback {
         byte[] signUpAvatar = msg.getAvatar();
 
         Users saveUser = new Users(msg.getUserName(), msg.getPass(), msg.getNickname(), msg.getAvatar());
+        for(User user: usersData){
+            if (user.getUsername().equals(msg.getUserName())){
+                msg.setType(MessageType.SIGN_UP_FAILED);
+                ThreadPerSocket thread = usersThreads.get(socket);
+                thread.send(msg);
+                onConnectFailed(socket);
+                break;
+            }
+        }
         int notExisted = UsersDAO.InsertUser(saveUser);
         if (notExisted == 1) {
             msg.setType(MessageType.CONNECTED);
@@ -168,10 +177,7 @@ public class Server extends Thread implements MessageCallback {
             return;
 
         } else {
-            msg.setType(MessageType.SIGN_UP_FAILED);
-            ThreadPerSocket thread = usersThreads.get(socket);
-            thread.send(msg);
-            onConnectFailed(socket);
+           controller.log("sign up falied");
 
         }
 
@@ -181,7 +187,7 @@ public class Server extends Thread implements MessageCallback {
         String loginUserName = msg.getUserName();
         String loginPassword = msg.getPass();
         String nickname = null;
-        //byte[] avatar = null;
+        byte[] avatar = null;
         if (isCorrectUserInfo(loginUserName, loginPassword)) {
             if (usersSockets.containsKey(msg.getUserName())) {
 
@@ -201,14 +207,14 @@ public class Server extends Thread implements MessageCallback {
                 for (User user : usersData) {
                     if (loginUserName.equals(user.getUsername())) {
                         nickname = user.getNickname();
-                        //   avatar=user.getAvatar();
+                        avatar=user.getAvatar();
                     }
                 }
 
                 msgBackToUser.setUserName(loginUserName);
                 msgBackToUser.setPass(msg.getPass());
                 msgBackToUser.setNickname(nickname);
-                //msgBackToUser.setAvatar(avatar);
+                msgBackToUser.setAvatar(avatar);
                 msgBackToUser.setStatus(Status.ONLINE);
                 msgBackToUser.setType(MessageType.CONNECTED);
                 msgBackToUser.setUserListData(usersData);
@@ -218,7 +224,7 @@ public class Server extends Thread implements MessageCallback {
                 msgToOtherUsers.setType(MessageType.NEW_USER_CONNECTED);
                 msgToOtherUsers.setUserName(loginUserName);
                 msgToOtherUsers.setNickname(nickname);
-                // msgToOtherUsers.setAvatar(avatar);
+                msgToOtherUsers.setAvatar(avatar);
                 msgToOtherUsers.setStatus(Status.ONLINE);
 
                 sendToAllUsersExcept(loginUserName, msgToOtherUsers);
@@ -280,9 +286,12 @@ public class Server extends Thread implements MessageCallback {
                     u.setNickname(msg.getNickname());
                     u.setAvatar(msg.getAvatar());
                 }
+
             }
             msg.setUserListData(usersData);
             sendToAll(msg);
+//            sendTo(user.getUsername(), msg);
+//            onUserChangeStatus(msg.getUserName(), msg.getNickname(), msg.getStatus(), MessageType.NEW_USER_CONNECTED);
             controller.log(msg.getUserName() + "has changed nickname, username to: " + msg.getNickname() + ", " + msg.getPass());
         } else {
             msg.setType(MessageType.CHANGE_INFO_FAILED);

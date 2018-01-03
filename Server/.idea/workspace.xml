@@ -29,28 +29,31 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/connection/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="365" column="35" lean-forward="true" selection-start-line="365" selection-start-column="35" selection-end-line="365" selection-end-column="35" />
+            <state relative-caret-position="258">
+              <caret line="291" column="27" lean-forward="true" selection-start-line="291" selection-start-column="27" selection-end-line="292" selection-end-column="46" />
               <folding>
                 <element signature="method#run#0;class#Server#0" expanded="false" />
                 <element signature="method#startServer#0;class#Server#0" expanded="false" />
                 <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
                 <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-                <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-                <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
                 <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
-                <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
-                <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
-                <element signature="method#sendTo#0;class#Server#0" expanded="false" />
-                <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
                 <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
-                <element signature="method#onChatTextFromGroup#0;class#Server#0" expanded="false" />
                 <element signature="class#ThreadPerSocket#0" expanded="false" />
                 <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
                 <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
                 <element signature="method#send#0;class#ThreadPerSocket#0" expanded="false" />
                 <element signature="method#stopThread#0;class#ThreadPerSocket#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/connection/MessageType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,7 +112,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="380" />
     <option name="width" value="986" />
     <option name="height" value="738" />
@@ -180,14 +183,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Client" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -346,15 +349,18 @@
       <workItem from="1514733778527" duration="3660000" />
       <workItem from="1514770224450" duration="5859000" />
       <workItem from="1514782786612" duration="941000" />
-      <workItem from="1514804758555" duration="5344000" />
+      <workItem from="1514804758555" duration="5944000" />
+      <workItem from="1514904385766" duration="1930000" />
+      <workItem from="1514909562712" duration="1438000" />
+      <workItem from="1514942646884" duration="3543000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42832000" />
+    <option name="totallyTimeSpent" value="50343000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -364,24 +370,24 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49029127" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49029127" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16251831" sideWeight="0.27041742" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18667643" sideWeight="0.72958255" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18448023" sideWeight="0.72958255" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967638" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -393,7 +399,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -407,15 +413,68 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
-            <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
             <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
-            <element signature="method#onChatTextFromGroup#0;class#Server#0" expanded="false" />
+            <element signature="class#ThreadPerSocket#0" expanded="false" />
+            <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
+            <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
+            <element signature="method#send#0;class#ThreadPerSocket#0" expanded="false" />
+            <element signature="method#stopThread#0;class#ThreadPerSocket#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/connection/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#run#0;class#Server#0" expanded="false" />
+            <element signature="method#startServer#0;class#Server#0" expanded="false" />
+            <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
+            <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
+            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
+            <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
+            <element signature="class#ThreadPerSocket#0" expanded="false" />
+            <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
+            <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
+            <element signature="method#send#0;class#ThreadPerSocket#0" expanded="false" />
+            <element signature="method#stopThread#0;class#ThreadPerSocket#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/connection/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#run#0;class#Server#0" expanded="false" />
+            <element signature="method#startServer#0;class#Server#0" expanded="false" />
+            <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
+            <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
+            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
+            <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
+            <element signature="class#ThreadPerSocket#0" expanded="false" />
+            <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
+            <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
+            <element signature="method#send#0;class#ThreadPerSocket#0" expanded="false" />
+            <element signature="method#stopThread#0;class#ThreadPerSocket#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/connection/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#run#0;class#Server#0" expanded="false" />
+            <element signature="method#startServer#0;class#Server#0" expanded="false" />
+            <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
+            <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
+            <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
+            <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
             <element signature="class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
@@ -429,7 +488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -437,7 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -450,15 +507,8 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
-            <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
             <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
-            <element signature="method#onChatTextFromGroup#0;class#Server#0" expanded="false" />
             <element signature="class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
@@ -472,7 +522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -485,15 +534,8 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
-            <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
             <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
-            <element signature="method#onChatTextFromGroup#0;class#Server#0" expanded="false" />
             <element signature="class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
@@ -512,15 +554,8 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
-            <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
             <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
-            <element signature="method#onChatTextFromGroup#0;class#Server#0" expanded="false" />
             <element signature="class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
@@ -539,15 +574,8 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
-            <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
             <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
-            <element signature="method#onChatTextFromGroup#0;class#Server#0" expanded="false" />
             <element signature="class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
@@ -566,15 +594,8 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
-            <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
             <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
-            <element signature="method#onChatTextFromGroup#0;class#Server#0" expanded="false" />
             <element signature="class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
@@ -593,15 +614,8 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
-            <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
             <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
-            <element signature="method#onChatTextFromGroup#0;class#Server#0" expanded="false" />
             <element signature="class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
@@ -627,15 +641,8 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
-            <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
             <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
-            <element signature="method#onChatTextFromGroup#0;class#Server#0" expanded="false" />
             <element signature="class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
@@ -661,15 +668,8 @@
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
-            <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
             <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
-            <element signature="method#onChatTextFromGroup#0;class#Server#0" expanded="false" />
             <element signature="class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
@@ -744,40 +744,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/connection/MessageType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/connection/Status.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/connection/MessageType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/connection/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="365" column="35" lean-forward="true" selection-start-line="365" selection-start-column="35" selection-end-line="365" selection-end-column="35" />
+        <state relative-caret-position="258">
+          <caret line="291" column="27" lean-forward="true" selection-start-line="291" selection-start-column="27" selection-end-line="292" selection-end-column="46" />
           <folding>
             <element signature="method#run#0;class#Server#0" expanded="false" />
             <element signature="method#startServer#0;class#Server#0" expanded="false" />
             <element signature="method#cloneUsersData#0;class#Server#0" expanded="false" />
             <element signature="method#onConnectFailed#0;class#Server#0" expanded="false" />
-            <element signature="method#onSignUp#0;class#Server#0" expanded="false" />
-            <element signature="method#onUserAttemptToLogin#0;class#Server#0" expanded="false" />
             <element signature="method#setUserStatus#0;class#Server#0" expanded="false" />
-            <element signature="method#isCorrectUserInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#onChangeInfo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendTo#0;class#Server#0" expanded="false" />
-            <element signature="method#sendToAll#0;class#Server#0" expanded="false" />
             <element signature="method#sendToAllUsersExcept#0;class#Server#0" expanded="false" />
-            <element signature="method#onChatTextFromGroup#0;class#Server#0" expanded="false" />
             <element signature="class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#ThreadPerSocket#0;class#ThreadPerSocket#0" expanded="false" />
             <element signature="method#run#0;class#ThreadPerSocket#0" expanded="false" />
