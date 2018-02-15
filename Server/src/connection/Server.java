@@ -93,12 +93,10 @@ public class Server extends Thread implements MessageCallback {
                 onRequestCall(msg);
                 break;
             case RESPOND_CALL_ACCEPT:
-                //TODO: set status BUDY -> SEND to all users to update status, send mess to userMain
                 onRespondCallAccept(msg);
                 break;
 
             case RESPOND_CALL_DECLINE:
-                //TODO: send mess to userMain
                 onRespondCallDecline(msg);
                 break;
 
@@ -264,6 +262,11 @@ public class Server extends Thread implements MessageCallback {
     }
 
     private void onUserChangeStatus(String username, String nickname, Status status, MessageType type) {
+        for(User user: usersData){
+            if(user.getUsername().equals(username)){
+                user.setStatus(status);
+            }
+        }
         Message msg = new Message();
         msg.setType(type);
         msg.setUserName(username);
@@ -273,6 +276,7 @@ public class Server extends Thread implements MessageCallback {
         for (Map.Entry<String, Socket> entry : usersSockets.entrySet()) {
             sendTo(entry.getKey(), msg);
         }
+
     }
 
     private void onChangeInfo(Message msg) {
