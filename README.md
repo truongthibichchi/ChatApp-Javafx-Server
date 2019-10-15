@@ -1,2 +1,2 @@
-# Server
-Server Chat Application
+Client: https://github.com/truongthibichchi/ChatApp-Javafx-Client
+
